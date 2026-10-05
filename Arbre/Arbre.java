@@ -1,3 +1,4 @@
+package Arbre;
 public class Arbre<T> {
 
     private Node<T> racine;
@@ -49,9 +50,5 @@ public class Arbre<T> {
             this.data = data;
         }
     }
-    public static void main(String[] args) {
-        Arbre<String> monArbre = new Arbre<>("7)");
-        monArbre.addLeft("4");
-        monArbre.addRight("13"); 
-    }
+   
 }
