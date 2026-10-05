@@ -49,6 +49,26 @@ public class Arbre<T> {
         public Node(T data){
             this.data = data;
         }
+
+        public String calcul(String expression){
+            if(data.equals("+")){
+                return String.valueOf(Integer.parseInt(nG.calcul()) + Integer.parseInt(nD.calcul()));
+            } else if(data.equals("-")){
+                return String.valueOf(Integer.parseInt(nG.calcul()) - Integer.parseInt(nD.calcul()));
+            } else if(data.equals("*")){
+                return String.valueOf(Integer.parseInt(nG.calcul()) * Integer.parseInt(nD.calcul()));
+            } else if(data.equals("/")){
+                return String.valueOf(Integer.parseInt(nG.calcul()) / Integer.parseInt(nD.calcul()));
+            } else {
+                return data.toString();
+            }
+        }
+        public static void main(String[] args) {
+        Arbre<String> monArbre = new Arbre<>("7");
+        monArbre.addLeft("4");
+        monArbre.addRight("13");
+        System.out.println(monArbre.calcul("52+83")); 
+    }
     }
    
 }
